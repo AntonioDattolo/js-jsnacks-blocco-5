@@ -25,18 +25,17 @@ console.log(tre)
 // La funzione ritornerà un nuovo array con i valori che hanno la posizione
 // compresa tra “a” e “b”
 
-let totale = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ,13 ,14 ,15 ,16 ,17 ,18 ,19 ]
+let totale = [1, 2, 3, 4, 75, 6, 7, "paolo", 28, 9, "macchina", "gatto", 12 ,13 ,414 ,15 ,16 ,17 ,418 ,19 ]
 let min= 3;
 let max = 15
-let mixA =[]
-mix(totale,min,max)
-function mix(x,y,z){
-    for(i=0;i < x.length;i++){
-        
-        element = x[i]
-        if(element>y && element<z){
+let nuovoArray = mix(totale,min,max) 
+console.log("il nuovo array", nuovoArray)
+function mix(array,rangeMin,rangeMax){
+    let mixA =[];
+    for(i=0;i < array.length;i++){
+        element = array[i]
+        if(i>rangeMin && i<rangeMax){
             mixA.push(element)
-        }   
-    }
+        } 
+    }return mixA
 }
-console.log("il nuovo array", mixA)
